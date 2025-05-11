@@ -1,0 +1,51 @@
+body{
+    text-align: center;
+}
+header{
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: space-around;
+    height: 100px;
+}
+
+nav{
+    width: 600px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    vertical-align: middle;
+}
+
+a{
+    text-decoration-line: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+content{
+    display: flex;
+    justify-content: space-between;
+}
+aside{
+    width: 250px;
+    position: fixed;
+    top: 100;
+    left: 0;
+    background-color: rosybrown;
+    height: 1000px;
+}
+main{
+    width: calc(100% - 250px);
+    background-color: lightgoldenrodyellow;
+    height: 1000px;
+    margin-left: 250px;
+}
+footer{
+    height: 60px;
+    bottom: 0px;
+}

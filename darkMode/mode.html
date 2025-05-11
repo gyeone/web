@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<html data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>모드 변경</title>
+    <link rel="stylesheet" href="mode.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">다크모드 / 라이트 모드 전환</h1>
+    </header>
+    <main>
+        <button id="mode-button">다크모드로 전환</button>
+        <p id="mode-text">버튼을 클릭해 다크모드🌛로 전환해보세요</p>
+    </main>
+    <script>
+        const mode = document.getElementById('mode-button');
+        const text = document.getElementById('mode-text');
+        const htmlEl = document.documentElement;
+        const theme = htmlEl.getAttribute('data-theme'); 
+        const savedTheme = localStorage.getItem('theme'); 
+        const savedText = localStorage.getItem('text');
+        const savedMode = localStorage.getItem('mode');
+        if (savedTheme) {
+            htmlEl.setAttribute('data-theme', savedTheme);
+        }
+        if (savedText){
+            text.innerText = savedText;
+        }
+        if (savedMode){
+            mode.innerText = savedMode;
+        }
+        mode.addEventListener('click', () =>{
+            const currentTheme = htmlEl.getAttribute('data-theme') || 'light'; 
+            const newTheme = currentTheme === "light" ? "dark" : "light";
+
+            htmlEl.setAttribute('data-theme', newTheme);
+            text.innerText = newTheme === "dark" ? '버튼을 클릭해 라이트모드🌞로 전환해보세요' : '버튼을 클릭해 다크모드🌛로 전환해보세요';
+            mode.innerText = newTheme === "dark" ? '라이트모드로 전환' : '다크모드로 전환';       
+            localStorage.setItem('theme', newTheme);
+            localStorage.setItem('text', text.innerText);
+            localStorage.setItem('mode', mode.innerText); 
+        })
+    </script>
+    
+</body>
+</html>

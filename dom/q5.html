@@ -1,0 +1,17 @@
+HTML에서 querySelector()를 사용하여 type="submit"인 첫 번째 <button> 요소를 선택하고, 텍스트를 "제출 버튼"으로 변경하세요.
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>문제 5</title>
+</head>
+<body>
+  <button type="button">일반 버튼</button>
+  <button type="submit">확인</button>
+
+  <script>
+    document.querySelector("button[type='submit']").innerText = "제출 버튼";
+  </script>
+</body>
+</html>

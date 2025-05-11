@@ -1,0 +1,23 @@
+<div class="box1">box1</div>
+<div class="box2">box2</div>
+<div class="size1000"></div>
+<!-- fixed 적용한 박스는 뷰포트화면 기준으로 스크롤과 무관하게 고정시키는 역할로서 스크롤해도 그 자리 그대로 따라오고
+    absolute 적용한 박스는 부모가 뷰포트이고 부모기준에서 위치해 있어 그 자리 그대로 지정되어 스크롤하면 위로 사라진다.-->
+
+<style>
+    .box1 {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background-color: red;
+    }
+    .box2 {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background-color: blue;
+    }
+    .size1000 {
+        height: 1000px;
+    }
+</style>

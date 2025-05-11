@@ -1,0 +1,19 @@
+HTML에서 querySelector()를 사용하여 class="content"인 요소 내부에서 첫 번째 <p> 요소를 선택하고, 그 텍스트를 "내용이 변경되었습니다!"로 수정하세요.
+
+    <!DOCTYPE html>
+    <html lang="ko">
+    <head>
+      <meta charset="UTF-8">
+      <title>문제 4</title>
+    </head>
+    <body>
+      <div class="content">
+        <p>첫 번째 문단</p>
+        <p>두 번째 문단</p>
+      </div>
+    
+      <script>
+        document.querySelector(".content p").innerText = "내용이 변경되었습니다!";
+      </script>
+    </body>
+    </html>
