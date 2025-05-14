@@ -33,7 +33,7 @@
             mode.innerText = savedMode;
         }
         mode.addEventListener('click', () =>{
-            const currentTheme = htmlEl.getAttribute('data-theme') || 'light'; 
+            const currentTheme = htmlEl.getAttribute('data-theme'); 
             const newTheme = currentTheme === "light" ? "dark" : "light";
 
             htmlEl.setAttribute('data-theme', newTheme);

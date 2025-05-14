@@ -1,0 +1,76 @@
+.box-container{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.box {
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;
+    background: #4a90e2;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box.scale{
+    animation: growShrink 1s ease-in-out infinite;
+}
+
+.box.slide{
+    animation: slide 1.5s ease infinite;
+}
+
+.box.bounce{
+    animation: bounce 2s ease infinite alternate;
+    border-radius: 50px;
+}
+
+@keyframes growShrink{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0); 
+    }
+    50%{
+        transform: translateX(50px); 
+    }
+    100%{
+        transform: translateX(0); 
+    }
+}
+
+@keyframes bounce{
+    0%{
+        transform: translateY(0);
+    }
+    45%{
+        width: 105px;
+    }
+    50%{
+        transform: translateY(70px);
+        width: 110px;
+        height: 90px;
+    }
+    55%{
+        width: 105px;
+    }
+    100%{
+        transform: translateY(0);
+
+    }
+}

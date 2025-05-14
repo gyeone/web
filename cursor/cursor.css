@@ -1,0 +1,21 @@
+.box {
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  line-height: 80px;
+  margin: 10px;
+  background-color: #4a90e2;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* 각각 다른 커서 설정 */
+.default { cursor: default; }
+.pointer { cursor: pointer; }
+.text:hover { cursor: text; }
+.move { cursor: move; }
+.grab { cursor: grab; }
+.grabbing { cursor: grabbing; }
+.not-allowed { cursor: not-allowed; }

@@ -1,0 +1,72 @@
+body {
+  font-family: sans-serif;
+  background: #f0f0f0;
+  text-align: center;
+  padding: 40px;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-wrapper {
+  perspective: 1000px;
+}
+
+.card {
+  width: 150px;
+  height: 200px;
+  position: relative;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.card-front {
+  background: #333;
+}
+
+.card-back {
+  background: #f06292;
+  transform: rotateY(180deg);
+}
+
+.card-wrapper input[type="checkbox"] {
+  display: none;
+}
+
+.card-wrapper label {
+  display: block;
+  width: 150px;
+  height: 200px;
+}
+
+.card-wrapper input:checked + label .card {
+  transform: rotateY(180deg);
+}
+
+.card:hover {
+  transform: scale(1.1) rotate(5deg) translateY(-10px) skewX(20deg);
+}
